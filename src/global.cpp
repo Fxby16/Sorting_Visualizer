@@ -24,5 +24,4 @@ SDL_Rect Menu_Rect; //rectangle where textureMenu will be rendered
 SDL_Color White={255,255,255}; //text color
 
 int WIDTH=1280,HEIGHT=720; //current size of the window
-int WINDOWED_WIDTH=1280,WINDOWED_HEIGHT=720,RECT_WIDTH=8; //size of the window in windowed mode and width of every rectangle
 std::vector<int>v; //vector for data

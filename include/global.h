@@ -5,6 +5,9 @@
 #include <SDL2/SDL_ttf.h>
 #include <vector>
 #define FONT_HEIGHT 27 //arial height with size 24
+#define WINDOWED_WIDTH 1280 //size of the window in windowed mode and width of every rectangle
+#define WINDOWED_HEIGHT 720
+#define RECT_WIDTH 8
 
 extern bool run; //variable for the main loop
 extern bool completed; //variable to set when sorting is completed to visualize everything green
@@ -29,9 +32,6 @@ extern SDL_Color White; //text color
 
 extern int WIDTH;  //current size of the window
 extern int HEIGHT;
-extern int WINDOWED_WIDTH; //size of the window in windowed mode and width of every rectangle
-extern int WINDOWED_HEIGHT;
-extern int RECT_WIDTH;
 extern std::vector<int>v; //vector for data
 
 #endif

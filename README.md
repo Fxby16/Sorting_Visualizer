@@ -23,7 +23,7 @@ If you are on Windows, you can use the preinstalled SDL version in SDL folder (i
 sudo apt-get install libsdl2-dev libsdl2-ttf-dev
 ```
 ## Build
-You will find two makefiles in makefiles folder. Move the one corresponding to your OS in the main folder and run 
+You can find two makefiles in makefiles folder. Move the one corresponding to your OS in the main folder and run 
 ```
 make
 ```  

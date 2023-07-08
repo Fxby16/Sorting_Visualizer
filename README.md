@@ -16,7 +16,6 @@ Here you can find a sorting visualizer made with SDL.
 ## Requirements  
 - SDL
 - SDL ttf
-- g++
 - make (optional)
 ## Installation
 If you are on Windows, you can use the preinstalled SDL version in SDL folder (it's the 64-bit version). If you are on Linux you can run this command to install SDL

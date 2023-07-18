@@ -5,33 +5,33 @@
 #include <SDL2/SDL_ttf.h>
 #include <vector>
 #define FONT_HEIGHT 27 //arial height with size 24
-#define WINDOWED_WIDTH 1280 //size of the window in windowed mode and width of every rectangle
+#define WINDOWED_WIDTH 1280 
 #define WINDOWED_HEIGHT 720
 #define RECT_WIDTH 8
 
-extern bool run; //variable for the main loop
-extern bool completed; //variable to set when sorting is completed to visualize everything green
-extern bool fullscreen; //variable to check if fullscreen is on or off
-extern bool loaded; //true if the array has been randomized, false if already sorted
-extern bool menuShowed; //true if the menu is currently on screen, false if not
-extern SDL_Event event; //variable for event poll
-extern SDL_Window *window; //main window
-extern SDL_Renderer *renderer; //main renderer
-extern TTF_Font *arial; //text font
+extern bool run; 
+extern bool completed; 
+extern bool fullscreen; 
+extern bool loaded; 
+extern bool menuShowed; 
+extern SDL_Event event; 
+extern SDL_Window *window; 
+extern SDL_Renderer *renderer; 
+extern TTF_Font *arial; 
 extern SDL_Keycode key;
-extern SDL_Surface *surfaceSortInfo; //surface that contains current sorting algorithm info
-extern SDL_Texture *textureSortInfo; //texture that contains current sorting algorithm info
-extern SDL_Rect SortInfo_Rect; //rectangle where textureSortInfo will be rendered
-extern SDL_Surface *surfaceCommands; //surface with commands info to show when the sorting is completed
-extern SDL_Texture *textureCommands; //texture with commands info to show when the sorting is completed
-extern SDL_Rect Commands_Rect; //rectangle where textureCommands will be rendered
-extern SDL_Surface *surfaceMenu; //surface that contains the menu
-extern SDL_Texture *textureMenu; //texture that contains the menu
-extern SDL_Rect Menu_Rect; //rectangle where textureMenu will be rendered
-extern SDL_Color White; //text color
+extern SDL_Surface *surfaceSortInfo; 
+extern SDL_Texture *textureSortInfo; 
+extern SDL_Rect SortInfo_Rect; 
+extern SDL_Surface *surfaceCommands; 
+extern SDL_Texture *textureCommands; 
+extern SDL_Rect Commands_Rect; 
+extern SDL_Surface *surfaceMenu; 
+extern SDL_Texture *textureMenu; 
+extern SDL_Rect Menu_Rect; 
+extern SDL_Color White; 
 
-extern int WIDTH;  //current size of the window
+extern int WIDTH;  
 extern int HEIGHT;
-extern std::vector<int>v; //vector for data
+extern std::vector<int>v;
 
 #endif

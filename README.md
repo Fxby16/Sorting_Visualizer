@@ -1,5 +1,5 @@
 # Sorting Visualizer
-Here you can find a sorting visualizer made with SDL.
+Sorting visualizer made with SDL.
 
 ## Sortings available
 - Bubble Sort

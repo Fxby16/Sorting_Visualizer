@@ -60,7 +60,7 @@ bool init(){ //function that initialize everything needed
         return EXIT_FAILURE;
     }
 
-    renderer=SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED); //initializing the renderer (hardware acceleration enabled)
+    renderer=SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC); //initializing the renderer (hardware acceleration enabled)
     if(renderer==NULL){
         fprintf(stderr,"Couldn't create the renderer: %s",SDL_GetError());
         return EXIT_FAILURE;

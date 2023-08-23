@@ -32,7 +32,7 @@ const char text[]="Press one button at a time to avoid bugs\n0: Generate new arr
 }
 
 void ShowMenu(){ //function that clears the renderer and shows menu texture
-    SDL_SetRenderDrawColor(renderer,38,38,168,0); //setting draw color
+    SDL_SetRenderDrawColor(renderer,0,0,0,0); //setting draw color
     SDL_RenderClear(renderer); //clearing the renderer with base background color (selected in the line above)
 
     SDL_RenderCopy(renderer,textureMenu,NULL,&Menu_Rect); //copy menu texture
@@ -132,7 +132,7 @@ int getText(const char *text){ //creating texture that contains the text passed 
 }
 
 void visualize(int x=-1,int y=-1,int z=-1){ //function that visualize the vector on the screen
-    SDL_SetRenderDrawColor(renderer,38,38,168,0); //setting draw color
+    SDL_SetRenderDrawColor(renderer,0,0,0,0); //setting draw color
     SDL_RenderClear(renderer); //clearing the renderer with base background color (selected in the line above)
 
 int j=0;
@@ -146,7 +146,7 @@ int j=0;
 
         if(completed){ //true only when the vector is sorted, it draws every rectangle green
             SDL_SetRenderDrawColor(renderer,27,228,37,0);
-            SDL_RenderDrawRect(renderer, &rect);
+            SDL_RenderFillRect(renderer, &rect);
         }else if(j==x){ //first vector cell to highlight
             SDL_SetRenderDrawColor(renderer,255,0,0,0); 
             SDL_RenderFillRect(renderer, &rect);
@@ -158,8 +158,11 @@ int j=0;
             SDL_RenderFillRect(renderer, &rect);
         }else{  //the current vector cell should not be highlighted, just drawn
             SDL_SetRenderDrawColor(renderer,255,255,255,0);
-            SDL_RenderDrawRect(renderer,&rect);
+            SDL_RenderFillRect(renderer,&rect);
         }
+        SDL_SetRenderDrawColor(renderer,0,0,0,0);
+        SDL_RenderDrawRect(renderer,&rect);
+
         j++; //move to the next cell
     }
     if(textureSortInfo!=NULL) //if the function is visualizing a sorting, show the info

@@ -1,3 +1,8 @@
+#if defined(_WIN32) || defined(_WIN64)
+    #define _WIN32_WINNT 0x0A00
+    #include <windows.h>
+#endif
+
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include <utilities.h>
@@ -5,6 +10,10 @@
 #include <sortings.h>
 
 int main(int argc,char *argv[]){
+
+#if defined(_WIN32) || defined(_WIN64)
+    SetProcessDPIAware();
+#endif
 
     if(init()){
         fprintf(stderr,"Initialization failed\n");

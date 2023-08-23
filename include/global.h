@@ -7,7 +7,7 @@
 #define FONT_HEIGHT 27 //arial height with size 24
 #define WINDOWED_WIDTH 1280 
 #define WINDOWED_HEIGHT 720
-#define RECT_WIDTH 8
+#define RECT_WIDTH 10
 
 extern bool run; 
 extern bool completed; 

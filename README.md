@@ -44,5 +44,4 @@ bin/sorting_visualizer
 ```
 
 ## Notes
-- If you have enabled screen scaling, the window might appear a bit blurry and might not get real screen resolution when fullscreen is enabled. To avoid this problem set screen scaling to 100%
 - For each sorting algorithm the time complexity and the auxiliary space are shown. Note that when best and worst case time complexity aren't the same, average time complexity is shown

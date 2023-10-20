@@ -9,7 +9,6 @@ int DIM=v.size();
                 std::swap(v[j],v[j+1]);
                 visualize(j,j+1,DIM-i);
             }
-            SDL_Delay(1);
         }
 }
 
@@ -23,7 +22,6 @@ int DIM=v.size();
             if(v[j]<v[min_idx]){
                 min_idx=j;
                 visualize(-1,min_idx,i);
-                SDL_Delay(20);
             }
         }
         
@@ -43,12 +41,10 @@ int DIM=v.size();
         while(j>=0 && v[j]>temp){
             v[j+1]=v[j];
             visualize(j,j+1,i);
-            SDL_Delay(5);
             --j;
         }
         v[j+1]=temp;
         visualize(-1,j+1,i);
-        SDL_Delay(5);
     }
 }
 
@@ -88,7 +84,6 @@ int i=left,j=mid,k=left;
     for (i=left;i<=right;i++){
         v[i]=temp[i];
         visualize(i);
-        SDL_Delay(10);
     }
 }
 void MergeSort(int left,int right){
@@ -112,7 +107,6 @@ int partition(int low,int high){
             std::swap(v[i],v[j]);
             visualize(i,j,high);
         }
-        SDL_Delay(4);
     }
     std::swap(v[i+1],v[high]);
     visualize(-1,i+1,high);
@@ -150,7 +144,6 @@ void heapify(int N,int i){
     if(largest!=i){
         std::swap(v[i],v[largest]);
         visualize(i,largest);
-        SDL_Delay(3);
         heapify(N,largest);
     }
 }
@@ -163,7 +156,6 @@ void HeapSort(int N){
     for(int i=N-1;i>0;i--){
         std::swap(v[0],v[i]);
         visualize(0,i);
-        SDL_Delay(3);
         heapify(i,0);
     }
 }
@@ -178,11 +170,9 @@ void ShellSort(int N){
             for(j=i;j>=gap && v[j-gap]>temp;j-=gap){
                 v[j]=v[j-gap];
                 visualize(j,j-gap,i);
-                SDL_Delay(2);
             }
             v[j]=temp;
             visualize(j,-1,i);
-            SDL_Delay(2);
         }
     }
 }
@@ -192,7 +182,6 @@ void ShellSort(int N){
 void Bingo(int &N,int &bingo,int &nextBingo){
     for (int i=1;i<N;bingo=std::min(bingo,v[i]),nextBingo=std::max(nextBingo,v[i]),i++){
         visualize(-1,i,-1);
-        SDL_Delay(10);
     }
 }
 
@@ -208,7 +197,6 @@ void BingoSort(int N){
             if(v[i]==bingo){
                 std::swap(v[i],v[nextElePos]);
                 visualize(-1,nextElePos,i);
-                SDL_Delay(50);
                 nextElePos=nextElePos+1;
             }
             else if(v[i]<nextBingo){
@@ -242,7 +230,6 @@ void CombSort(int N){
                 swapped=true;
             }
             visualize(i,-1,i+gap);
-            SDL_Delay(3);
         }
     }
 }
@@ -260,7 +247,6 @@ void CocktailSort(int N){
             if(v[i]>v[i+1]){
                 std::swap(v[i],v[i+1]);
                 visualize(-1,i+1,i);
-                SDL_Delay(1);
                 swapped=true;
             }
         }
@@ -272,7 +258,6 @@ void CocktailSort(int N){
             if(v[i]>v[i+1]){
                 std::swap(v[i],v[i+1]);
                 visualize(-1,i+1,i);
-                SDL_Delay(1);
                 swapped=true;
             }
         }
